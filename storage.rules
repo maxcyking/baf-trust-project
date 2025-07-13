@@ -1,0 +1,137 @@
+rules_version = '2';
+
+// Firebase Storage Security Rules
+service firebase.storage {
+  match /b/{bucket}/o {
+    
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if user has admin privileges
+    function isAdmin() {
+      return isAuthenticated() && 
+        firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role in ['admin', 'super_admin'];
+    }
+    
+    // Helper function to check if user is super admin
+    function isSuperAdmin() {
+      return isAuthenticated() && 
+        firestore.get(/databases/(default)/documents/users/$(request.auth.uid)).data.role == 'super_admin';
+    }
+    
+    // Helper function to validate file size (10MB limit)
+    function isValidFileSize() {
+      return request.resource.size <= 10 * 1024 * 1024;
+    }
+    
+    // Helper function to validate image file types
+    function isValidImageType() {
+      return request.resource.contentType.matches('image/.*');
+    }
+    
+    // QR codes directory - Admin upload only
+    match /qr-codes/{filename} {
+      allow read: if true; // Public read access for displaying QR codes
+      allow write: if isAdmin() && isValidFileSize() && isValidImageType();
+      allow delete: if isAdmin();
+    }
+    
+    // Gallery images directory - Admin upload only
+    match /gallery/{filename} {
+      // Public read access for gallery images (for both admin and user gallery pages)
+      allow read: if true;
+      
+      // Admin upload with comprehensive validation
+      allow write: if isAdmin() && 
+        isValidFileSize() && 
+        isValidImageType() &&
+        // Additional validation for gallery images
+        request.resource.contentType in ['image/jpeg', 'image/png', 'image/gif', 'image/webp'] &&
+        // Filename should contain timestamp for uniqueness
+        filename.matches('.*[0-9]{13}.*');
+      
+      // Only admins can delete gallery images
+      allow delete: if isAdmin();
+      
+      // Allow listing gallery directory for admin management
+      allow list: if isAdmin();
+    }
+
+    // Team profile images directory - Admin upload only
+    match /team/{filename} {
+      // Public read access for team member profile images
+      allow read: if true;
+      
+      // Admin upload with validation
+      allow write: if isAdmin() && 
+        isValidFileSize() && 
+        isValidImageType() &&
+        // Only allow common image formats for profiles
+        request.resource.contentType in ['image/jpeg', 'image/png', 'image/gif', 'image/webp'] &&
+        // Filename should contain timestamp for uniqueness
+        filename.matches('.*[0-9]{13}.*');
+      
+      // Only admins can delete team profile images
+      allow delete: if isAdmin();
+      
+      // Allow listing team directory for admin management
+      allow list: if isAdmin();
+    }
+    
+    // Profile images directory - Users can upload their own
+    match /profiles/{userId}/{filename} {
+      allow read: if true; // Public read access for profile images
+      allow write: if (isAuthenticated() && request.auth.uid == userId) || isAdmin();
+      allow delete: if (isAuthenticated() && request.auth.uid == userId) || isAdmin();
+    }
+    
+    // Training program images directory - Admin upload only
+    match /training-programs/{filename} {
+      allow read: if true; // Public read access for training program images
+      allow write: if isAdmin() && isValidFileSize() && isValidImageType();
+      allow delete: if isAdmin();
+    }
+    
+    // Registration documents directory - User uploads for registration
+    match /registration-documents/{userId}/{filename} {
+      // Users can upload their own registration documents
+      allow write: if isAuthenticated() && 
+        request.auth.uid == userId && 
+        isValidFileSize() && 
+        isValidImageType() &&
+        // Only allow common image formats for documents
+        request.resource.contentType in ['image/jpeg', 'image/png', 'image/pdf'];
+      
+      // Users can read their own documents, admins can read all
+      allow read: if (isAuthenticated() && request.auth.uid == userId) || isAdmin();
+      
+      // Only admins can delete registration documents
+      allow delete: if isAdmin();
+    }
+
+    // Documents directory - Admin upload only
+    match /documents/{filename} {
+      allow read: if isAdmin(); // Admin only access for documents
+      allow write: if isAdmin() && isValidFileSize();
+      allow delete: if isSuperAdmin();
+    }
+    
+    // Temp uploads directory - Authenticated users can upload temporarily
+    match /temp/{userId}/{filename} {
+      allow read, write: if isAuthenticated() && request.auth.uid == userId && isValidFileSize();
+      allow delete: if (isAuthenticated() && request.auth.uid == userId) || isAdmin();
+    }
+    
+    // Backup directory - Super admin only
+    match /backups/{filename} {
+      allow read, write: if isSuperAdmin();
+    }
+    
+    // Default rule - deny all other access
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+} 

@@ -1,0 +1,63 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role in ['admin', 'super_admin'];
+    }
+    
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Users collection
+    match /users/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create, update: if isAdmin();
+      allow update: if isOwner(userId) && 
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['lastLoginAt', 'updatedAt']);
+    }
+    
+    // Inquiries collection
+    match /inquiries/{document} {
+      allow create: if true;
+      allow read, update, delete: if isAdmin();
+    }
+    
+    // Testimonials collection
+    match /testimonials/{document} {
+      allow read: if resource.data.isPublished == true;
+      allow read, write: if isAdmin();
+    }
+    
+    // Gallery collection
+    match /gallery/{document} {
+      allow read: if resource.data.isPublished == true;
+      allow read, write: if isAdmin();
+    }
+    
+    // Content collection
+    match /content/{document} {
+      allow read: if resource.data.isPublished == true;
+      allow read, write: if isAdmin();
+    }
+    
+    // Training Programs collection
+    match /trainingPrograms/{document} {
+      allow read: if resource.data.isActive == true;
+      allow read, write: if isAdmin();
+    }
+    
+    // Settings collection
+    match /settings/{document} {
+      allow read, write: if isAdmin();
+    }
+  }
+} 

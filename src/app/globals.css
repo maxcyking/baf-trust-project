@@ -1,26 +1,158 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Agricultural Theme - Green and Blue Color Palette */
+:root {
+  --radius: 0.625rem;
+  
+  /* Base colors */
+  --background: oklch(98.5% 0.008 142);
+  --foreground: oklch(15% 0.02 142);
+  
+  /* Card colors */
+  --card: oklch(100% 0 0);
+  --card-foreground: oklch(15% 0.02 142);
+  
+  /* Popover colors */
+  --popover: oklch(100% 0 0);
+  --popover-foreground: oklch(15% 0.02 142);
+  
+  /* Primary colors - Deep agricultural green */
+  --primary: oklch(45% 0.15 142);
+  --primary-foreground: oklch(98% 0.008 142);
+  
+  /* Secondary colors - Soft blue-green */
+  --secondary: oklch(92% 0.025 200);
+  --secondary-foreground: oklch(20% 0.08 142);
+  
+  /* Muted colors */
+  --muted: oklch(95% 0.015 142);
+  --muted-foreground: oklch(55% 0.06 142);
+  
+  /* Accent colors - Fresh green */
+  --accent: oklch(88% 0.08 142);
+  --accent-foreground: oklch(25% 0.1 142);
+  
+  /* Destructive - Agricultural red for alerts */
+  --destructive: oklch(62% 0.22 20);
+  
+  /* Border and input */
+  --border: oklch(88% 0.03 142);
+  --input: oklch(90% 0.025 142);
+  --ring: oklch(45% 0.15 142);
+  
+  /* Chart colors - Agricultural themed */
+  --chart-1: oklch(65% 0.18 142); /* Green */
+  --chart-2: oklch(60% 0.15 220); /* Blue */
+  --chart-3: oklch(70% 0.12 85);  /* Yellow-green */
+  --chart-4: oklch(55% 0.2 160);  /* Teal */
+  --chart-5: oklch(68% 0.16 40);  /* Orange-red */
+  
+  /* Sidebar colors */
+  --sidebar: oklch(96% 0.012 142);
+  --sidebar-foreground: oklch(20% 0.04 142);
+  --sidebar-primary: oklch(45% 0.15 142);
+  --sidebar-primary-foreground: oklch(98% 0.008 142);
+  --sidebar-accent: oklch(90% 0.05 142);
+  --sidebar-accent-foreground: oklch(25% 0.1 142);
+  --sidebar-border: oklch(88% 0.03 142);
+  --sidebar-ring: oklch(45% 0.15 142);
+}
+
+.dark {
+  /* Dark theme with agricultural colors */
+  --background: oklch(12% 0.02 142);
+  --foreground: oklch(95% 0.008 142);
+  
+  --card: oklch(18% 0.025 142);
+  --card-foreground: oklch(95% 0.008 142);
+  
+  --popover: oklch(18% 0.025 142);
+  --popover-foreground: oklch(95% 0.008 142);
+  
+  /* Primary - Bright agricultural green for dark mode */
+  --primary: oklch(75% 0.18 142);
+  --primary-foreground: oklch(12% 0.02 142);
+  
+  --secondary: oklch(25% 0.04 142);
+  --secondary-foreground: oklch(95% 0.008 142);
+  
+  --muted: oklch(22% 0.03 142);
+  --muted-foreground: oklch(70% 0.06 142);
+  
+  --accent: oklch(30% 0.08 142);
+  --accent-foreground: oklch(95% 0.008 142);
+  
+  --destructive: oklch(68% 0.22 20);
+  
+  --border: oklch(25% 0.04 142);
+  --input: oklch(28% 0.05 142);
+  --ring: oklch(75% 0.18 142);
+  
+  /* Dark mode chart colors */
+  --chart-1: oklch(65% 0.18 142);
+  --chart-2: oklch(70% 0.15 220);
+  --chart-3: oklch(75% 0.12 85);
+  --chart-4: oklch(60% 0.2 160);
+  --chart-5: oklch(72% 0.16 40);
+  
+  --sidebar: oklch(15% 0.025 142);
+  --sidebar-foreground: oklch(95% 0.008 142);
+  --sidebar-primary: oklch(75% 0.18 142);
+  --sidebar-primary-foreground: oklch(12% 0.02 142);
+  --sidebar-accent: oklch(25% 0.04 142);
+  --sidebar-accent-foreground: oklch(95% 0.008 142);
+  --sidebar-border: oklch(25% 0.04 142);
+  --sidebar-ring: oklch(75% 0.18 142);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
 }
