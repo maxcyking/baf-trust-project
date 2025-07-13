@@ -43,7 +43,7 @@ export default function Home() {
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto">
               Transforming agriculture through comprehensive training programs in goat farming, 
-              poultry, sheep farming, and modern agricultural techniques. Join thousands of 
+              poultry, sheep farming, and modern agricultural techniques - Updated 2024. Join thousands of 
               successful farmers across India.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
