@@ -90,7 +90,7 @@ export default function CropManagementPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 dark:from-blue-900/20 dark:via-indigo-900/20 dark:to-blue-900/30 py-20 overflow-hidden">
         <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
@@ -106,10 +106,10 @@ export default function CropManagementPage() {
                 <span className="text-blue-600">Crop Management</span> Mastery Course
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Master advanced crop management techniques with our comprehensive 16-week program. 
+                Master advanced crop management techniques with our comprehensive 16-week program.
                 Learn precision farming and modern agricultural practices for maximum yields.
               </p>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-600">16</div>
@@ -140,7 +140,7 @@ export default function CropManagementPage() {
                 </Button>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-400 to-indigo-600 rounded-2xl p-8 text-white shadow-2xl">
                 <div className="text-center">
@@ -178,7 +178,7 @@ export default function CropManagementPage() {
               Transform your farming with scientific methods and modern technology
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <Card key={index} className="border-0 bg-card shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
@@ -206,7 +206,7 @@ export default function CropManagementPage() {
               Comprehensive training modules designed to make you a crop management expert
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {programHighlights.map((highlight, index) => (
               <Card key={index} className="hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
@@ -246,7 +246,7 @@ export default function CropManagementPage() {
               Real farmers achieving exceptional results with advanced crop management
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <Card key={index} className="border-0 bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-lg transition-all duration-300">
@@ -278,7 +278,7 @@ export default function CropManagementPage() {
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
             Transform your farming with scientific methods and achieve exceptional yields
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
               <BookOpen className="mr-2 h-5 w-5" />
@@ -289,7 +289,7 @@ export default function CropManagementPage() {
               Call: +91-9876543210
             </Button>
           </div>
-          
+
           <div className="flex items-center justify-center space-x-6 text-sm opacity-90">
             <div className="flex items-center">
               <CheckCircle className="h-4 w-4 mr-2" />
