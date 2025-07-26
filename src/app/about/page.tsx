@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Navigation } from "@/components/navigation";
-import { AppDownloadSection } from "@/components/app-download-section";
+import { AppDownloadSectionNew } from "@/components/app-download-section-new";
 import { 
   BookOpen, 
   Users, 
@@ -445,7 +445,7 @@ export default function AboutUs() {
       </section>
 
       {/* App Download Section */}
-      <AppDownloadSection variant="full" />
+      <AppDownloadSectionNew variant="full" />
 
       {/* Team & Values */}
       <section className="py-20">
