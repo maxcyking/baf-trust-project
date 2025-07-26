@@ -9,7 +9,7 @@ import { useAuth } from '@/lib/auth-context';
 import { AdminUser, getAdminUser, ADMIN_PERMISSIONS } from '@/lib/auth-utils';
 import { GalleryItem, GalleryStats, MediaType, MEDIA_TYPE_LABELS, MEDIA_TYPE_COLORS, extractYouTubeVideoId, getYouTubeThumbnail } from '@/types/gallery';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
@@ -62,6 +62,7 @@ const gallerySchema = z.object({
   tags: z.array(z.string()).optional(),
   isPublished: z.boolean(),
   isFeatured: z.boolean(),
+  isHomepage: z.boolean(),
   order: z.number().min(0, 'Order must be a positive number')
 });
 
@@ -97,6 +98,7 @@ export default function AdminGalleryPage() {
       tags: [],
       isPublished: true,
       isFeatured: false,
+      isHomepage: false,
       order: 0
     }
   });
@@ -146,6 +148,7 @@ export default function AdminGalleryPage() {
       setValue('newsSource', editingItem.newsSource || '');
       setValue('isPublished', editingItem.isPublished);
       setValue('isFeatured', editingItem.isFeatured);
+      setValue('isHomepage', editingItem.isHomepage || false);
       setValue('order', editingItem.order);
       setTags(editingItem.tags || ['']);
       setImagePreview(editingItem.imageUrl || null);
@@ -219,10 +222,10 @@ export default function AdminGalleryPage() {
       const timestamp = Date.now();
       const fileName = `gallery/${timestamp}-${imageFile.name}`;
       const storageRef = ref(storage, fileName);
-      
+
       await uploadBytes(storageRef, imageFile);
       const downloadURL = await getDownloadURL(storageRef);
-      
+
       toast.success('Image uploaded successfully');
       return downloadURL;
     } catch (error) {
@@ -277,11 +280,12 @@ export default function AdminGalleryPage() {
         tags: tags.filter(tag => tag.trim() !== ''),
         isPublished: data.isPublished,
         isFeatured: data.isFeatured,
+        isHomepage: data.isHomepage,
         order: data.order,
         updatedAt: Timestamp.now(),
-        ...(editingItem ? {} : { 
+        ...(editingItem ? {} : {
           createdAt: Timestamp.now(),
-          createdBy: adminUser.uid 
+          createdBy: adminUser.uid
         })
       };
 
@@ -320,7 +324,7 @@ export default function AdminGalleryPage() {
         await addDoc(collection(db, 'gallery'), itemData);
         toast.success('Gallery item added successfully');
       }
-      
+
       handleCancel();
       fetchGalleryItems();
     } catch (error) {
@@ -422,7 +426,7 @@ export default function AdminGalleryPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Toaster position="top-right" />
-      
+
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
@@ -439,11 +443,10 @@ export default function AdminGalleryPage() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-                    item.active 
-                      ? 'bg-green-100 text-green-700' 
+                  className={`flex items-center px-4 py-2 rounded-lg transition-colors ${item.active
+                      ? 'bg-green-100 text-green-700'
                       : 'text-gray-700 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   <item.icon className="h-5 w-5 mr-3" />
                   {item.label}
@@ -466,11 +469,10 @@ export default function AdminGalleryPage() {
               <a
                 key={item.href}
                 href={item.href}
-                className={`flex items-center px-4 py-2 rounded-lg transition-colors ${
-                  item.active 
-                    ? 'bg-green-100 text-green-700' 
+                className={`flex items-center px-4 py-2 rounded-lg transition-colors ${item.active
+                    ? 'bg-green-100 text-green-700'
                     : 'text-gray-700 hover:bg-gray-100'
-                }`}
+                  }`}
               >
                 <item.icon className="h-5 w-5 mr-3" />
                 {item.label}
@@ -533,7 +535,7 @@ export default function AdminGalleryPage() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
@@ -545,7 +547,7 @@ export default function AdminGalleryPage() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
@@ -557,7 +559,7 @@ export default function AdminGalleryPage() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
@@ -569,7 +571,7 @@ export default function AdminGalleryPage() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
@@ -581,7 +583,7 @@ export default function AdminGalleryPage() {
                 </div>
               </CardContent>
             </Card>
-            
+
             <Card>
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">
@@ -606,7 +608,7 @@ export default function AdminGalleryPage() {
                   {editingItem ? 'Update the gallery item details' : 'Create a new gallery item for your media collection'}
                 </DialogDescription>
               </DialogHeader>
-              
+
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 {/* Type Selection */}
                 <div>
@@ -777,7 +779,7 @@ export default function AdminGalleryPage() {
                 <Separator />
 
                 {/* Settings */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="flex items-center space-x-2">
                     <Switch
                       id="isPublished"
@@ -796,6 +798,16 @@ export default function AdminGalleryPage() {
                       onCheckedChange={(checked: boolean) => setValue('isFeatured', checked)}
                     />
                     <Label htmlFor="isFeatured">Featured</Label>
+                  </div>
+
+                  <div className="flex items-center space-x-2">
+                    <Switch
+                      id="isHomepage"
+                      {...register('isHomepage')}
+                      checked={watch('isHomepage')}
+                      onCheckedChange={(checked: boolean) => setValue('isHomepage', checked)}
+                    />
+                    <Label htmlFor="isHomepage">Show on Homepage</Label>
                   </div>
                 </div>
 
@@ -831,7 +843,7 @@ export default function AdminGalleryPage() {
                       className="w-64"
                     />
                   </div>
-                  
+
                   <div className="flex items-center space-x-2">
                     <Filter className="h-4 w-4 text-gray-400" />
                     <select
@@ -886,11 +898,11 @@ export default function AdminGalleryPage() {
                             </Badge>
                           )}
                         </div>
-                        
+
                         {item.description && (
                           <p className="text-gray-600 mb-4 line-clamp-2">{item.description}</p>
                         )}
-                        
+
                         <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
                           <span>Order: {item.order}</span>
                           {item.newsDate && (
@@ -938,7 +950,7 @@ export default function AdminGalleryPage() {
                           )}
                         </div>
                       </div>
-                      
+
                       <div className="flex items-center gap-2 ml-4">
                         {item.type === 'video' && item.videoUrl && (
                           <Button

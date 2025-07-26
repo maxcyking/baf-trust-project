@@ -24,6 +24,7 @@ export interface GalleryItem {
   tags?: string[];
   isPublished: boolean;
   isFeatured: boolean;
+  isHomepage: boolean; // New field for homepage display
   order: number;
   
   // Timestamps
@@ -43,6 +44,7 @@ export interface GalleryFormData {
   tags?: string[];
   isPublished: boolean;
   isFeatured: boolean;
+  isHomepage: boolean; // New field for homepage display
   order: number;
 }
 

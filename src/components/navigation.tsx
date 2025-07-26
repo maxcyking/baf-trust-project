@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
-  BookOpen, 
+  Smartphone, 
   Menu, 
   X, 
   Leaf
@@ -74,10 +74,16 @@ export function Navigation() {
             >
               Contact
             </Link>
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <BookOpen className="h-4 w-4 mr-2" />
-              Enroll Now
-            </Button>
+            <Link 
+              href="https://play.google.com/store/apps/details?id=com.nisarindian.classes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Smartphone className="h-4 w-4 mr-2" />
+                Download App
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -140,10 +146,17 @@ export function Navigation() {
                 Contact
               </Link>
               <div className="px-3 py-2">
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <BookOpen className="h-4 w-4 mr-2" />
-                  Enroll Now
-                </Button>
+                <Link 
+                  href="https://play.google.com/store/apps/details?id=com.nisarindian.classes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Smartphone className="h-4 w-4 mr-2" />
+                    Download App
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

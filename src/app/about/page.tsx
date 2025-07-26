@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Navigation } from "@/components/navigation";
+import { AppDownloadSection } from "@/components/app-download-section";
 import { 
   BookOpen, 
   Users, 
@@ -48,7 +49,7 @@ export default function AboutUs() {
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto">
               निसार इंडियन गोट ब्रीडिंग फार्म - ट्रेनिंग सेंटर
               <br />
-              माडावासी, राजगढ़ (चूरू) राजस्थान 331023
+              मोड़ावासी, राजगढ़ (चूरू) राजस्थान 331023
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
@@ -203,7 +204,7 @@ export default function AboutUs() {
                 🏫 Our Training Center
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                निसार इंडियन गोट ब्रीडिंग फार्म - ट्रेनिंग सेंटर located in माडावासी, राजगढ़ (चूरू) राजस्थान 
+                निसार इंडियन गोट ब्रीडिंग फार्म - ट्रेनिंग सेंटर located in मोड़ावासी, राजगढ़ (चूरू) राजस्थान 
                 offers state-of-the-art facilities for comprehensive agricultural training.
               </p>
               
@@ -443,6 +444,9 @@ export default function AboutUs() {
         </div>
       </section>
 
+      {/* App Download Section */}
+      <AppDownloadSection variant="full" />
+
       {/* Team & Values */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -538,7 +542,7 @@ export default function AboutUs() {
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-2">Training Center</h3>
                 <p className="text-muted-foreground">
-                  माडावासी, राजगढ़ (चूरू)<br />
+                  मोड़ावासी, राजगढ़ (चूरू)<br />
                   राजस्थान 331023
                 </p>
               </CardContent>

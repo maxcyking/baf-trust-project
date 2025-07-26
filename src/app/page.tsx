@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Navigation } from "@/components/navigation";
+import { HomepageGallery } from "@/components/homepage-gallery";
+import { AppDownloadSectionNew } from "@/components/app-download-section-new";
+import { Footer } from "@/components/footer";
 import { 
   Leaf, 
   BookOpen, 
@@ -17,11 +20,7 @@ import {
   TrendingUp,
   Heart,
   Clock,
-  Camera,
-  Quote,
-  Play,
-  Image as ImageIcon,
-  ExternalLink
+  Quote
 } from "lucide-react";
 
 export default function Home() {
@@ -43,7 +42,7 @@ export default function Home() {
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto">
               Transforming agriculture through comprehensive training programs in goat farming, 
-              poultry, sheep farming, and modern agricultural techniques - Updated 2024. Join thousands of 
+              poultry, sheep farming, and modern agricultural techniques. Join thousands of 
               successful farmers across India.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -130,9 +129,11 @@ export default function Home() {
                   <Badge variant="secondary">12 Weeks</Badge>
                   <Badge className="bg-primary/20 text-primary">Most Popular</Badge>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Learn More
-                </Button>
+                <Link href="/programs/goat-farming">
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -168,9 +169,11 @@ export default function Home() {
                   <Badge variant="secondary">10 Weeks</Badge>
                   <Badge className="bg-accent text-accent-foreground">High ROI</Badge>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Learn More
-                </Button>
+                <Link href="/programs/poultry-farming">
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -206,9 +209,11 @@ export default function Home() {
                   <Badge variant="secondary">8 Weeks</Badge>
                   <Badge className="bg-secondary text-secondary-foreground">Seasonal</Badge>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Learn More
-                </Button>
+                <Link href="/programs/sheep-farming">
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -244,9 +249,11 @@ export default function Home() {
                   <Badge variant="secondary">14 Weeks</Badge>
                   <Badge className="bg-green-100 text-green-800">Eco-Friendly</Badge>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Learn More
-                </Button>
+                <Link href="/programs/organic-farming">
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -282,9 +289,11 @@ export default function Home() {
                   <Badge variant="secondary">16 Weeks</Badge>
                   <Badge className="bg-blue-100 text-blue-800">Comprehensive</Badge>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Learn More
-                </Button>
+                <Link href="/programs/crop-management">
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
@@ -320,9 +329,11 @@ export default function Home() {
                   <Badge variant="secondary">12 Weeks</Badge>
                   <Badge className="bg-yellow-100 text-yellow-800">Profitable</Badge>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Learn More
-                </Button>
+                <Link href="/programs/dairy-farming">
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
@@ -418,154 +429,10 @@ export default function Home() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              📸 Agricultural Gallery
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Explore our training facilities, farming activities, and success stories through visual documentation
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Farm Training Images */}
-            <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <ImageIcon className="h-16 w-16 mx-auto mb-4 opacity-80" />
-                  <h3 className="text-xl font-semibold mb-2">Goat Farming Training</h3>
-                  <p className="text-sm opacity-90">Live training sessions</p>
-                </div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <Play className="h-12 w-12 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-4">
-                <h4 className="font-semibold mb-2">Practical Goat Farming</h4>
-                <p className="text-sm text-muted-foreground mb-3">Hands-on training with live goats, covering breeding, feeding, and health management</p>
-                <Button size="sm" variant="outline" className="w-full">
-                  <Camera className="h-4 w-4 mr-2" />
-                  View Gallery
-                </Button>
-              </CardContent>
-            </Card>
+      <HomepageGallery />
 
-            <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <ImageIcon className="h-16 w-16 mx-auto mb-4 opacity-80" />
-                  <h3 className="text-xl font-semibold mb-2">Poultry Farming</h3>
-                  <p className="text-sm opacity-90">Modern farming techniques</p>
-                </div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <Play className="h-12 w-12 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-4">
-                <h4 className="font-semibold mb-2">Poultry Training Center</h4>
-                <p className="text-sm text-muted-foreground mb-3">State-of-the-art poultry facilities with automated feeding and climate control systems</p>
-                <Button size="sm" variant="outline" className="w-full">
-                  <Camera className="h-4 w-4 mr-2" />
-                  View Gallery
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <ImageIcon className="h-16 w-16 mx-auto mb-4 opacity-80" />
-                  <h3 className="text-xl font-semibold mb-2">Sheep Farming</h3>
-                  <p className="text-sm opacity-90">Wool & meat production</p>
-                </div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <Play className="h-12 w-12 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-4">
-                <h4 className="font-semibold mb-2">Sheep Breeding Program</h4>
-                <p className="text-sm text-muted-foreground mb-3">Comprehensive sheep breeding and wool processing training modules</p>
-                <Button size="sm" variant="outline" className="w-full">
-                  <Camera className="h-4 w-4 mr-2" />
-                  View Gallery
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <ImageIcon className="h-16 w-16 mx-auto mb-4 opacity-80" />
-                  <h3 className="text-xl font-semibold mb-2">Training Facilities</h3>
-                  <p className="text-sm opacity-90">Modern infrastructure</p>
-                </div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <Play className="h-12 w-12 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-4">
-                <h4 className="font-semibold mb-2">Training Infrastructure</h4>
-                <p className="text-sm text-muted-foreground mb-3">Modern classrooms, laboratories, and demonstration areas for comprehensive learning</p>
-                <Button size="sm" variant="outline" className="w-full">
-                  <Camera className="h-4 w-4 mr-2" />
-                  View Gallery
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <ImageIcon className="h-16 w-16 mx-auto mb-4 opacity-80" />
-                  <h3 className="text-xl font-semibold mb-2">Organic Farming</h3>
-                  <p className="text-sm opacity-90">Sustainable practices</p>
-                </div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <Play className="h-12 w-12 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-4">
-                <h4 className="font-semibold mb-2">Organic Demonstration Farm</h4>
-                <p className="text-sm text-muted-foreground mb-3">Chemical-free farming techniques and soil health management demonstrations</p>
-                <Button size="sm" variant="outline" className="w-full">
-                  <Camera className="h-4 w-4 mr-2" />
-                  View Gallery
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300">
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-teal-400 to-cyan-600 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <ImageIcon className="h-16 w-16 mx-auto mb-4 opacity-80" />
-                  <h3 className="text-xl font-semibold mb-2">Success Stories</h3>
-                  <p className="text-sm opacity-90">Farmer achievements</p>
-                </div>
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                  <Play className="h-12 w-12 text-white" />
-                </div>
-              </div>
-              <CardContent className="p-4">
-                <h4 className="font-semibold mb-2">Farmer Success Stories</h4>
-                <p className="text-sm text-muted-foreground mb-3">Real farmers sharing their transformation journey and increased profits</p>
-                <Button size="sm" variant="outline" className="w-full">
-                  <Camera className="h-4 w-4 mr-2" />
-                  View Gallery
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              <ExternalLink className="mr-2 h-5 w-5" />
-              View Complete Gallery
-            </Button>
-          </div>
-        </div>
-      </section>
+      {/* App Download Section */}
+      <AppDownloadSectionNew variant="compact" />
 
       {/* Testimonials Section */}
       <section className="py-20 bg-accent/5">
@@ -791,81 +658,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="bg-primary text-primary-foreground rounded-full p-2">
-                  <Leaf className="h-5 w-5" />
-                </div>
-                <div>
-                  <span className="font-bold text-lg text-primary">BAF Trust</span>
-                  <div className="text-sm text-muted-foreground">Bharat Agro Foundation</div>
-                </div>
-              </div>
-              <p className="text-muted-foreground mb-4 max-w-md">
-                Empowering farmers across India with modern agricultural techniques and sustainable farming practices. 
-                Building a stronger, more prosperous agricultural community.
-              </p>
-              <div className="flex space-x-4">
-                <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  Facebook
-                </Badge>
-                <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  Twitter
-                </Badge>
-                <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  Instagram
-                </Badge>
-                <Badge variant="outline" className="cursor-pointer hover:bg-accent">
-                  YouTube
-                </Badge>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
-              <ul className="space-y-2">
-                <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-                <li><Link href="/courses" className="text-muted-foreground hover:text-primary transition-colors">All Courses</Link></li>
-                <li><Link href="/success-stories" className="text-muted-foreground hover:text-primary transition-colors">Success Stories</Link></li>
-                <li><Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
-                <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-semibold text-foreground mb-4">Contact Info</h3>
-              <ul className="space-y-2">
-                <li className="flex items-center text-muted-foreground">
-                  <Phone className="h-4 w-4 mr-2 text-primary" />
-                  +91 98765 43210
-                </li>
-                <li className="flex items-center text-muted-foreground">
-                  <Mail className="h-4 w-4 mr-2 text-primary" />
-                  info@baftrust.org
-                </li>
-                <li className="flex items-start text-muted-foreground">
-                  <MapPin className="h-4 w-4 mr-2 text-primary mt-1" />
-                  <span>123 Agriculture Hub<br />New Delhi, India 110001</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-border mt-12 pt-8 text-center">
-            <p className="text-muted-foreground">
-              © 2024 BAF Trust - Bharat Agro Foundation. All rights reserved. 
-              <span className="ml-2">
-                <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-                {" | "}
-                <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
-              </span>
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
