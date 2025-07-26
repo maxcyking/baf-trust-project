@@ -1,28 +1,18 @@
 'use client';
 
-import Link from 'next/link';
 import { Navigation } from '@/components/navigation';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
   CheckCircle,
-  Clock,
-  Users,
-  Award,
   BookOpen,
   TrendingUp,
   Shield,
-  Heart,
-  Star,
-  ArrowRight,
   Phone,
-  Mail,
-  Calendar,
   Target,
   DollarSign,
-  Zap,
-  Sprout
+  Zap
 } from 'lucide-react';
 
 export default function CropManagementPage() {
@@ -210,7 +200,7 @@ export default function CropManagementPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              What You'll Master
+              What You&apos;ll Master
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive training modules designed to make you a crop management expert
@@ -270,7 +260,7 @@ export default function CropManagementPage() {
                     <Badge className="bg-blue-600 text-white mt-2">{story.income}</Badge>
                   </div>
                   <p className="text-sm text-muted-foreground text-center italic">
-                    "{story.story}"
+                    "                    &quot;{story.story}&quot;"
                   </p>
                 </CardContent>
               </Card>

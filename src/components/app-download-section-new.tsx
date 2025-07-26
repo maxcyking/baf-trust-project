@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Smartphone, Play } from 'lucide-react';
+import { Play } from 'lucide-react';
 
 interface AppDownloadSectionProps {
   variant?: 'full' | 'compact' | 'footer';

@@ -7,15 +7,12 @@ import { HomepageGallery } from "@/components/homepage-gallery";
 import { AppDownloadSectionNew } from "@/components/app-download-section-new";
 import { Footer } from "@/components/footer";
 import { 
-  Leaf, 
   BookOpen, 
   Users, 
   Award, 
   CheckCircle, 
   Star,
   Phone,
-  Mail,
-  MapPin,
   Shield,
   TrendingUp,
   Heart,
