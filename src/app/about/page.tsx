@@ -4,9 +4,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Navigation } from "@/components/navigation";
 import { AppDownloadSectionNew } from "@/components/app-download-section-new";
-import { 
-  BookOpen, 
-  Users, 
+import {
+  BookOpen,
+  Users,
   Mail,
   MapPin,
   Building2,
@@ -30,7 +30,7 @@ export default function AboutUs() {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,25 +78,25 @@ export default function AboutUs() {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold text-primary mb-3">Our Mission</h3>
                     <p className="text-muted-foreground">
-                      To empower farmers across India with modern agricultural techniques, comprehensive training programs, 
-                      and government subsidy assistance. We bridge the gap between traditional farming and scientific methods 
+                      To empower farmers across India with modern agricultural techniques, comprehensive training programs,
+                      and government subsidy assistance. We bridge the gap between traditional farming and scientific methods
                       to ensure sustainable and profitable agriculture.
                     </p>
                   </CardContent>
                 </Card>
-                
+
                 <Card className="border-l-4 border-l-secondary bg-secondary/5">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold text-secondary-foreground mb-3">Our Vision</h3>
                     <p className="text-muted-foreground">
-                      To become India&apos;s leading agricultural foundation, transforming rural livelihoods through quality education, 
+                      To become India&apos;s leading agricultural foundation, transforming rural livelihoods through quality education,
                       practical training, and innovative farming solutions. Building a prosperous and self-reliant agricultural community.
                     </p>
                   </CardContent>
                 </Card>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-6">
               <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -105,7 +105,7 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-bold text-primary mb-2">10,000+</h3>
                 <p className="text-muted-foreground">Farmers Trained</p>
               </Card>
-              
+
               <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="h-8 w-8 text-primary" />
@@ -113,7 +113,7 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-bold text-primary mb-2">95%</h3>
                 <p className="text-muted-foreground">Success Rate</p>
               </Card>
-              
+
               <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-primary" />
@@ -121,7 +121,7 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-bold text-primary mb-2">25+</h3>
                 <p className="text-muted-foreground">States Covered</p>
               </Card>
-              
+
               <Card className="text-center p-6 hover:shadow-lg transition-all duration-300">
                 <div className="bg-primary/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Calendar className="h-8 w-8 text-primary" />
@@ -145,7 +145,7 @@ export default function AboutUs() {
               BAF Trust is officially registered and recognized by the Government of India
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center hover:shadow-lg transition-all duration-300 border-2 border-primary/20">
               <CardContent className="p-8">
@@ -204,10 +204,10 @@ export default function AboutUs() {
                 🏫 Our Training Center
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                निसार इंडियन गोट ब्रीडिंग फार्म - ट्रेनिंग सेंटर located in मोड़ावासी, राजगढ़ (चूरू) राजस्थान 
+                निसार इंडियन गोट ब्रीडिंग फार्म - ट्रेनिंग सेंटर located in मोड़ावासी, राजगढ़ (चूरू) राजस्थान
                 offers state-of-the-art facilities for comprehensive agricultural training.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 rounded-full p-2">
@@ -218,7 +218,7 @@ export default function AboutUs() {
                     <p className="text-muted-foreground">Well-equipped classrooms, laboratories, and demonstration areas</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 rounded-full p-2">
                     <Users className="h-5 w-5 text-primary" />
@@ -228,7 +228,7 @@ export default function AboutUs() {
                     <p className="text-muted-foreground">Hands-on experience with goats, sheep, poultry, and other livestock</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 rounded-full p-2">
                     <GraduationCap className="h-5 w-5 text-primary" />
@@ -238,7 +238,7 @@ export default function AboutUs() {
                     <p className="text-muted-foreground">Experienced professionals with decades of farming expertise</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="bg-primary/10 rounded-full p-2">
                     <Zap className="h-5 w-5 text-primary" />
@@ -250,7 +250,7 @@ export default function AboutUs() {
                 </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-6">
               <Card className="aspect-square bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white">
                 <div className="text-center">
@@ -259,7 +259,7 @@ export default function AboutUs() {
                   <p className="text-sm opacity-90">Live Training</p>
                 </div>
               </Card>
-              
+
               <Card className="aspect-square bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white">
                 <div className="text-center">
                   <div className="text-4xl mb-4">🐔</div>
@@ -267,7 +267,7 @@ export default function AboutUs() {
                   <p className="text-sm opacity-90">Modern Facility</p>
                 </div>
               </Card>
-              
+
               <Card className="aspect-square bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white">
                 <div className="text-center">
                   <div className="text-4xl mb-4">🏫</div>
@@ -275,7 +275,7 @@ export default function AboutUs() {
                   <p className="text-sm opacity-90">Theory Sessions</p>
                 </div>
               </Card>
-              
+
               <Card className="aspect-square bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white">
                 <div className="text-center">
                   <div className="text-4xl mb-4">🔬</div>
@@ -299,7 +299,7 @@ export default function AboutUs() {
               ऑनलाइन और ऑफलाइन पशुपालन प्रशिक्षण और सरकारी योजनाओं की जानकारी प्राप्त करें
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <Card className="border-2 border-green-200 hover:border-green-400 transition-all duration-300 hover:shadow-xl">
               <CardHeader className="bg-green-50">
@@ -397,7 +397,7 @@ export default function AboutUs() {
               केंद्र सरकार की राष्ट्रीय पशुधन मिशन योजना से जुड़ें और बड़ी सब्सिडी का लाभ उठाएं
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <Card className="bg-white/10 border-white/20 text-white text-center">
               <CardContent className="p-8">
@@ -458,7 +458,7 @@ export default function AboutUs() {
               The principles that guide our commitment to agricultural excellence
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="text-center hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6">
@@ -522,7 +522,7 @@ export default function AboutUs() {
               Ready to start your agricultural transformation journey?
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="text-center hover:shadow-lg transition-all duration-300">
               <CardContent className="p-8">
@@ -559,7 +559,7 @@ export default function AboutUs() {
               </CardContent>
             </Card>
           </div>
-          
+
           <div className="text-center mt-12">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 mr-4">
               <MessageCircle className="mr-2 h-5 w-5" />

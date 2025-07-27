@@ -29,27 +29,27 @@ export default function SheepFarmingPage() {
   const programHighlights = [
     {
       icon: Target,
-      title: "Dual Production Systems",
-      description: "Master both wool and meat production for maximum profitability",
-      features: ["Wool production", "Meat production", "Integrated systems"]
+      title: "भेड़ बकरी पालन ट्रेनिंग",
+      description: "30+ वीडियो के साथ व्यापक प्रशिक्षण कार्यक्रम",
+      features: ["30+ प्रशिक्षण वीडियो", "5 दिन का सर्टिफिकेट", "3 महीने तक वीडियो एक्सेस"]
     },
     {
       icon: Shield,
-      title: "Pasture & Grazing Management",
-      description: "Optimize grazing systems and pasture management for healthy sheep",
-      features: ["Rotational grazing", "Pasture improvement", "Feed supplementation"]
+      title: "व्यावहारिक प्रशिक्षण",
+      description: "वास्तविक फार्म अनुभव और हैंड्स-ऑन ट्रेनिंग",
+      features: ["लाइव डेमोंस्ट्रेशन", "फील्ड विजिट", "व्यावहारिक अभ्यास"]
     },
     {
       icon: Heart,
-      title: "Wool Processing & Value Addition",
-      description: "Learn wool processing techniques to increase product value",
-      features: ["Shearing techniques", "Wool grading", "Processing methods"]
+      title: "स्वास्थ्य प्रबंधन",
+      description: "भेड़ों के स्वास्थ्य और देखभाल की संपूर्ण जानकारी",
+      features: ["रोग निवारण", "टीकाकरण कार्यक्रम", "आपातकालीन देखभाल"]
     },
     {
       icon: TrendingUp,
-      title: "Seasonal Business Planning",
-      description: "Develop strategies for seasonal farming and year-round income",
-      features: ["Seasonal planning", "Market timing", "Income diversification"]
+      title: "व्यापार और मार्केटिंग",
+      description: "लाभदायक व्यापार के लिए मार्केटिंग रणनीति",
+      features: ["बाजार विश्लेषण", "मूल्य निर्धारण", "लाभ अनुकूलन"]
     }
   ];
 
@@ -113,40 +113,49 @@ export default function SheepFarmingPage() {
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                <span className="text-purple-600">Sheep Farming</span> Mastery Course
+                <span className="text-purple-600">भेड़ बकरी पालन</span> प्रशिक्षण कार्यक्रम
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Learn sustainable sheep farming for wool and meat production with our comprehensive 8-week program. 
-                Perfect for seasonal farming with excellent returns.
+                नमस्कार किसान भाइयों! हमारे "Nisar Indian किसान साथी" ऐप के माध्यम से भेड़ बकरी पालन की संपूर्ण जानकारी प्राप्त करें। 
+                30+ वीडियो के साथ 5 दिन का सर्टिफिकेट कोर्स।
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">8</div>
-                  <div className="text-sm text-muted-foreground">Weeks</div>
+                  <div className="text-2xl font-bold text-purple-600">30+</div>
+                  <div className="text-sm text-muted-foreground">वीडियो</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">2500+</div>
-                  <div className="text-sm text-muted-foreground">Students</div>
+                  <div className="text-2xl font-bold text-purple-600">5</div>
+                  <div className="text-sm text-muted-foreground">दिन सर्टिफिकेट</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">88%</div>
-                  <div className="text-sm text-muted-foreground">Success Rate</div>
+                  <div className="text-2xl font-bold text-purple-600">3</div>
+                  <div className="text-sm text-muted-foreground">महीने एक्सेस</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600">₹35K</div>
-                  <div className="text-sm text-muted-foreground">Avg Income</div>
+                  <div className="text-2xl font-bold text-purple-600">₹3000</div>
+                  <div className="text-sm text-muted-foreground">कोर्स फीस</div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3"
+                  onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+                >
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Enroll Now - ₹2,999
+                  अभी एनरोल करें
                 </Button>
-                <Button size="lg" variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3"
+                  onClick={() => window.open('https://wa.me/918079043733', '_blank')}
+                >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call for Demo
+                  डेमो के लिए कॉल करें
                 </Button>
               </div>
             </div>
@@ -290,13 +299,22 @@ export default function SheepFarmingPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3">
+            <Button 
+              size="lg" 
+              className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3"
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+            >
               <BookOpen className="mr-2 h-5 w-5" />
-              Enroll Now - ₹2,999
+              अभी डाउनलोड करें
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3"
+              onClick={() => window.open('https://wa.me/918079043733?text=मुझे भेड़ बकरी पालन प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+            >
               <Phone className="mr-2 h-5 w-5" />
-              Call: +91-9876543210
+              कॉल: +91-8079043733
             </Button>
           </div>
           

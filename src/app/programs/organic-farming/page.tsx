@@ -29,25 +29,25 @@ export default function OrganicFarmingPage() {
   const programHighlights = [
     {
       icon: Leaf,
-      title: "Soil Health & Composting",
-      description: "Master organic soil management and natural composting techniques",
-      features: ["Soil testing", "Composting methods", "Vermicomposting"]
+      title: "जैविक खेती प्रशिक्षण",
+      description: "रासायनिक मुक्त खेती की संपूर्ण जानकारी और तकनीक",
+      features: ["मिट्टी परीक्षण", "कंपोस्ट बनाना", "वर्मी कंपोस्टिंग"]
     },
     {
       icon: Shield,
-      title: "Natural Pest Management",
-      description: "Learn chemical-free pest control using integrated pest management",
-      features: ["Beneficial insects", "Organic pesticides", "Disease prevention"]
+      title: "प्राकृतिक कीट प्रबंधन",
+      description: "रसायन मुक्त कीट नियंत्रण और एकीकृत कीट प्रबंधन",
+      features: ["लाभकारी कीट", "जैविक कीटनाशक", "रोग निवारण"]
     },
     {
       icon: Target,
-      title: "Organic Certification",
-      description: "Navigate the certification process and access premium markets",
-      features: ["Certification process", "Documentation", "Market access"]
+      title: "जैविक प्रमाणीकरण",
+      description: "प्रमाणीकरण प्रक्रिया और प्रीमियम बाजार तक पहुंच",
+      features: ["प्रमाणीकरण प्रक्रिया", "दस्तावेजीकरण", "बाजार पहुंच"]
     },
     {
       icon: TrendingUp,
-      title: "Premium Marketing",
+      title: "प्रीमियम मार्केटिंग",
       description: "Build your organic brand and access high-value market channels",
       features: ["Brand building", "Premium pricing", "Direct marketing"]
     }

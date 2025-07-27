@@ -40,11 +40,20 @@ export default function Contact() {
               Feel free to contact us with any questions or concerns. You can use the form on our website or email us directly. We appreciate your interest and look forward to hearing from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3"
+                onClick={() => window.open('https://wa.me/918079043733?text=नमस्कार, मुझे आपकी सेवाओं के बारे में जानकारी चाहिए', '_blank')}
+              >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 WhatsApp Chat
               </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3"
+                onClick={() => window.open('tel:+918079043733', '_self')}
+              >
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </Button>
@@ -308,6 +317,7 @@ export default function Contact() {
                   <Button 
                     variant="outline" 
                     className="w-full justify-start border-green-200 text-green-700 hover:bg-green-50"
+                    onClick={() => window.open('https://wa.me/918079043733?text=नमस्कार, मुझे आपकी सेवाओं के बारे में जानकारी चाहिए', '_blank')}
                   >
                     <MessageCircle className="mr-2 h-4 w-4" />
                     WhatsApp Chat - +91 8079043733
@@ -317,6 +327,7 @@ export default function Contact() {
                   <Button 
                     variant="outline" 
                     className="w-full justify-start border-blue-200 text-blue-700 hover:bg-blue-50"
+                    onClick={() => window.open('tel:+918079043733', '_self')}
                   >
                     <Phone className="mr-2 h-4 w-4" />
                     Direct Call - तुरंत कॉल करें
@@ -429,6 +440,7 @@ export default function Contact() {
             <Button 
               size="lg" 
               className="bg-background text-primary hover:bg-background/90 px-8 py-3"
+              onClick={() => window.open('tel:+918079043733', '_self')}
             >
               <Phone className="mr-2 h-5 w-5" />
               अभी कॉल करें
@@ -437,6 +449,7 @@ export default function Contact() {
               size="lg" 
               variant="outline" 
               className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary px-8 py-3"
+              onClick={() => window.open('https://wa.me/918079043733?text=नमस्कार, मुझे आपकी सेवाओं के बारे में जानकारी चाहिए', '_blank')}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               WhatsApp Message

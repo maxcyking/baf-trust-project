@@ -113,11 +113,11 @@ export default function DairyFarmingPage() {
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                <span className="text-yellow-600">Dairy Farming</span> Success Course
+                <span className="text-yellow-600">डेयरी फार्मिंग</span> प्रशिक्षण कार्यक्रम
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Build a profitable dairy business with our comprehensive 12-week program. 
-                Learn modern dairy farming techniques for sustainable income generation.
+                नमस्कार किसान भाइयों! हमारे "Nisar Indian किसान साथी" ऐप के माध्यम से डेयरी फार्मिंग की संपूर्ण जानकारी प्राप्त करें। 
+                आधुनिक डेयरी फार्मिंग तकनीक सीखें और स्थायी आय उत्पन्न करें।
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
@@ -140,13 +140,22 @@ export default function DairyFarmingPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3"
+                  onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+                >
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Enroll Now - ₹4,499
+                  अभी डाउनलोड करें
                 </Button>
-                <Button size="lg" variant="outline" className="border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white px-8 py-3"
+                  onClick={() => window.open('https://wa.me/918079043733?text=मुझे डेयरी फार्मिंग प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+                >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call for Demo
+                  डेमो के लिए कॉल करें
                 </Button>
               </div>
             </div>
@@ -290,13 +299,22 @@ export default function DairyFarmingPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-yellow-600 hover:bg-gray-100 px-8 py-3">
+            <Button 
+              size="lg" 
+              className="bg-white text-yellow-600 hover:bg-gray-100 px-8 py-3"
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+            >
               <BookOpen className="mr-2 h-5 w-5" />
-              Enroll Now - ₹4,499
+              अभी डाउनलोड करें
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-yellow-600 px-8 py-3">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-yellow-600 px-8 py-3"
+              onClick={() => window.open('https://wa.me/918079043733?text=मुझे डेयरी फार्मिंग प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+            >
               <Phone className="mr-2 h-5 w-5" />
-              Call: +91-9876543210
+              कॉल: +91-8079043733
             </Button>
           </div>
           

@@ -29,27 +29,27 @@ export default function PoultryFarmingPage() {
   const programHighlights = [
     {
       icon: Target,
-      title: "Layer & Broiler Expertise",
-      description: "Master both egg and meat production systems for diversified income streams",
-      features: ["Layer management", "Broiler production", "Hybrid systems"]
+      title: "मुर्गीपालन प्रशिक्षण",
+      description: "3+ वीडियो के साथ व्यापक मुर्गी पालन प्रशिक्षण",
+      features: ["3+ प्रशिक्षण वीडियो", "3 दिन का सर्टिफिकेट", "3 महीने तक वीडियो एक्सेस"]
     },
     {
       icon: Zap,
-      title: "Modern Equipment & Automation",
-      description: "Learn to use cutting-edge poultry equipment and automation systems",
-      features: ["Automated feeding", "Climate control", "Egg collection systems"]
+      title: "आधुनिक तकनीक",
+      description: "नवीनतम मुर्गी पालन तकनीक और उपकरणों की जानकारी",
+      features: ["स्वचालित फीडिंग", "जलवायु नियंत्रण", "अंडा संग्रह प्रणाली"]
     },
     {
       icon: Shield,
-      title: "Health & Biosecurity",
-      description: "Comprehensive disease prevention and health management protocols",
-      features: ["Vaccination programs", "Biosecurity measures", "Disease diagnosis"]
+      title: "स्वास्थ्य प्रबंधन",
+      description: "मुर्गियों के स्वास्थ्य और रोग निवारण की संपूर्ण जानकारी",
+      features: ["टीकाकरण कार्यक्रम", "जैव सुरक्षा उपाय", "रोग निदान"]
     },
     {
       icon: TrendingUp,
-      title: "Business Optimization",
-      description: "Maximize profits through efficient production and smart marketing",
-      features: ["Cost optimization", "Market analysis", "Scaling strategies"]
+      title: "व्यापार अनुकूलन",
+      description: "कुशल उत्पादन और स्मार्ट मार्केटिंग के माध्यम से अधिकतम लाभ",
+      features: ["लागत अनुकूलन", "बाजार विश्लेषण", "व्यापार विस्तार"]
     }
   ];
 
@@ -109,44 +109,53 @@ export default function PoultryFarmingPage() {
             <div>
               <div className="flex items-center mb-6">
                 <Badge className="bg-blue-100 text-blue-800 border-blue-200 px-4 py-2">
-                  🐔 High ROI Program
+                  🐔 उच्च लाभ कार्यक्रम
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                <span className="text-blue-600">Poultry Farming</span> Excellence Course
+                <span className="text-blue-600">मुर्गीपालन</span> प्रशिक्षण
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Master modern poultry farming techniques with our comprehensive 10-week program. 
-                Learn layer and broiler management for maximum productivity and profitability.
+                नमस्कार किसान भाइयों! हमारे "Nisar Indian किसान साथी" ऐप के माध्यम से मुर्गीपालन की संपूर्ण जानकारी प्राप्त करें। 
+                3+ वीडियो के साथ व्यावहारिक प्रशिक्षण और 3 दिन का प्रमाण पत्र। वीडियो देखने का मौका 3 महीने तक।
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">10</div>
-                  <div className="text-sm text-muted-foreground">Weeks</div>
+                  <div className="text-2xl font-bold text-blue-600">3+</div>
+                  <div className="text-sm text-muted-foreground">वीडियो</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">3500+</div>
-                  <div className="text-sm text-muted-foreground">Students</div>
+                  <div className="text-2xl font-bold text-blue-600">3</div>
+                  <div className="text-sm text-muted-foreground">दिन सर्टिफिकेट</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">92%</div>
-                  <div className="text-sm text-muted-foreground">Success Rate</div>
+                  <div className="text-2xl font-bold text-blue-600">3</div>
+                  <div className="text-sm text-muted-foreground">महीने एक्सेस</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">₹50K</div>
-                  <div className="text-sm text-muted-foreground">Avg Income</div>
+                  <div className="text-2xl font-bold text-blue-600">व्यावहारिक</div>
+                  <div className="text-sm text-muted-foreground">प्रशिक्षण</div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                  onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+                >
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Enroll Now - ₹3,999
+                  अभी डाउनलोड करें
                 </Button>
-                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3"
+                  onClick={() => window.open('https://wa.me/918079043733?text=मुझे मुर्गीपालन प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+                >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call for Demo
+                  डेमो के लिए कॉल करें
                 </Button>
               </div>
             </div>
@@ -290,13 +299,22 @@ export default function PoultryFarmingPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+            <Button 
+              size="lg" 
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+            >
               <BookOpen className="mr-2 h-5 w-5" />
-              Enroll Now - ₹3,999
+              अभी डाउनलोड करें
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
+              onClick={() => window.open('https://wa.me/918079043733?text=मुझे मुर्गीपालन प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+            >
               <Phone className="mr-2 h-5 w-5" />
-              Call: +91-9876543210
+              कॉल: +91-8079043733
             </Button>
           </div>
           
