@@ -19,50 +19,50 @@ export default function CropManagementPage() {
   const programHighlights = [
     {
       icon: Zap,
-      title: "Precision Farming Technology",
-      description: "Master modern agricultural technology and precision farming techniques",
-      features: ["GPS technology", "Drone applications", "Data management"]
+      title: "फसल प्रबंधन प्रशिक्षण",
+      description: "आधुनिक कृषि तकनीक और सटीक खेती की तकनीकों में महारत हासिल करें",
+      features: ["GPS तकनीक", "ड्रोन अनुप्रयोग", "डेटा प्रबंधन"]
     },
     {
       icon: Target,
-      title: "Advanced Crop Planning",
-      description: "Scientific crop selection and planning for maximum yield and profit",
-      features: ["Market analysis", "Risk assessment", "Seasonal planning"]
+      title: "उन्नत फसल योजना",
+      description: "अधिकतम उपज और लाभ के लिए वैज्ञानिक फसल चयन और योजना",
+      features: ["बाजार विश्लेषण", "जोखिम मूल्यांकन", "मौसमी योजना"]
     },
     {
       icon: Shield,
-      title: "Integrated Pest Management",
-      description: "Comprehensive pest and disease control using scientific methods",
-      features: ["IPM strategies", "Biological control", "Disease management"]
+      title: "एकीकृत कीट प्रबंधन",
+      description: "वैज्ञानिक विधियों का उपयोग करके व्यापक कीट और रोग नियंत्रण",
+      features: ["IPM रणनीतियां", "जैविक नियंत्रण", "रोग प्रबंधन"]
     },
     {
       icon: TrendingUp,
-      title: "Yield Optimization",
-      description: "Maximize crop productivity through scientific management practices",
-      features: ["Nutrient management", "Water optimization", "Harvest timing"]
+      title: "उपज अनुकूलन",
+      description: "वैज्ञानिक प्रबंधन प्रथाओं के माध्यम से फसल उत्पादकता को अधिकतम करें",
+      features: ["पोषक तत्व प्रबंधन", "जल अनुकूलन", "फसल कटाई का समय"]
     }
   ];
 
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Higher Yields",
-      description: "Increase crop productivity by 40-60% with scientific methods"
+      title: "उच्च उपज",
+      description: "वैज्ञानिक विधियों से फसल उत्पादकता में 40-60% की वृद्धि"
     },
     {
       icon: DollarSign,
-      title: "Cost Optimization",
-      description: "Reduce input costs while maximizing output and profits"
+      title: "लागत अनुकूलन",
+      description: "उत्पादन और लाभ को अधिकतम करते हुए इनपुट लागत कम करें"
     },
     {
       icon: Shield,
-      title: "Risk Management",
-      description: "Minimize crop losses through proper planning and management"
+      title: "जोखिम प्रबंधन",
+      description: "उचित योजना और प्रबंधन के माध्यम से फसल हानि को कम करें"
     },
     {
       icon: Zap,
-      title: "Modern Technology",
-      description: "Learn latest precision farming and smart agriculture techniques"
+      title: "आधुनिक तकनीक",
+      description: "नवीनतम सटीक खेती और स्मार्ट कृषि तकनीकें सीखें"
     }
   ];
 
@@ -71,19 +71,19 @@ export default function CropManagementPage() {
       name: "विकास गुप्ता",
       location: "Madhya Pradesh",
       income: "₹1,50,000/month",
-      story: "Implemented precision farming techniques. Increased wheat yield from 25 to 45 quintals per acre."
+      story: "सटीक खेती तकनीकों को लागू किया। गेहूं की उपज 25 से बढ़कर 45 क्विंटल प्रति एकड़ हो गई।"
     },
     {
       name: "संजय पटेल",
       location: "Gujarat",
       income: "₹2,00,000/month",
-      story: "Cotton farming expert using modern techniques. Reduced input costs by 30% while doubling profits."
+      story: "आधुनिक तकनीकों का उपयोग करने वाले कपास खेती विशेषज्ञ। लाभ दोगुना करते हुए इनपुट लागत 30% कम की।"
     },
     {
       name: "रमेश सिंह",
       location: "Haryana",
       income: "₹1,80,000/month",
-      story: "Integrated crop management specialist. Successfully manages 50 acres with scientific methods."
+      story: "एकीकृत फसल प्रबंधन विशेषज्ञ। वैज्ञानिक विधियों से 50 एकड़ का सफलतापूर्वक प्रबंधन करते हैं।"
     }
   ];
 
@@ -99,44 +99,53 @@ export default function CropManagementPage() {
             <div>
               <div className="flex items-center mb-6">
                 <Badge className="bg-blue-100 text-blue-800 border-blue-200 px-4 py-2">
-                  🌾 Comprehensive Program
+                  🌾 व्यापक कार्यक्रम
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                <span className="text-blue-600">Crop Management</span> Mastery Course
+                <span className="text-blue-600">फसल प्रबंधन</span> प्रशिक्षण कार्यक्रम
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Master advanced crop management techniques with our comprehensive 16-week program.
-                Learn precision farming and modern agricultural practices for maximum yields.
+                नमस्कार किसान भाइयों! हमारे "Nisar Indian किसान साथी" ऐप के माध्यम से फसल प्रबंधन की संपूर्ण जानकारी प्राप्त करें। 
+                सटीक खेती और आधुनिक कृषि प्रथाओं को सीखें अधिकतम उपज के लिए।
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">16</div>
-                  <div className="text-sm text-muted-foreground">Weeks</div>
+                  <div className="text-2xl font-bold text-blue-600">उन्नत</div>
+                  <div className="text-sm text-muted-foreground">तकनीक</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">6000+</div>
-                  <div className="text-sm text-muted-foreground">Students</div>
+                  <div className="text-2xl font-bold text-blue-600">सटीक</div>
+                  <div className="text-sm text-muted-foreground">खेती</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">94%</div>
-                  <div className="text-sm text-muted-foreground">Success Rate</div>
+                  <div className="text-2xl font-bold text-blue-600">अधिकतम</div>
+                  <div className="text-sm text-muted-foreground">उपज</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600">₹1.5L</div>
-                  <div className="text-sm text-muted-foreground">Avg Income</div>
+                  <div className="text-2xl font-bold text-blue-600">विशेषज्ञ</div>
+                  <div className="text-sm text-muted-foreground">मार्गदर्शन</div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3"
+                  onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+                >
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Enroll Now - ₹7,999
+                  अभी डाउनलोड करें
                 </Button>
-                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3"
+                  onClick={() => window.open('https://wa.me/918079043733?text=मुझे फसल प्रबंधन प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+                >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call for Demo
+                  डेमो के लिए कॉल करें
                 </Button>
               </div>
             </div>
@@ -273,20 +282,29 @@ export default function CropManagementPage() {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Ready to Master Crop Management?
+            फसल प्रबंधन में महारत हासिल करने के लिए तैयार हैं?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Transform your farming with scientific methods and achieve exceptional yields
+            वैज्ञानिक विधियों से अपनी खेती को बदलें और असाधारण उपज प्राप्त करें
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+            <Button 
+              size="lg" 
+              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3"
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+            >
               <BookOpen className="mr-2 h-5 w-5" />
-              Enroll Now - ₹7,999
+              अभी डाउनलोड करें
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3"
+              onClick={() => window.open('https://wa.me/918079043733?text=मुझे फसल प्रबंधन प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+            >
               <Phone className="mr-2 h-5 w-5" />
-              Call: +91-9876543210
+              कॉल: +91-8079043733
             </Button>
           </div>
 

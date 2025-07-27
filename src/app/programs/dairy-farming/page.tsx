@@ -29,50 +29,50 @@ export default function DairyFarmingPage() {
   const programHighlights = [
     {
       icon: Target,
-      title: "Cattle Breed Selection",
-      description: "Master the art of selecting high-yielding dairy cattle breeds",
-      features: ["Breed characteristics", "Selection criteria", "Genetic improvement"]
+      title: "डेयरी फार्मिंग प्रशिक्षण",
+      description: "गाय-भैंस पालन की संपूर्ण जानकारी और आधुनिक तकनीक",
+      features: ["नस्ल चयन", "दूध उत्पादन तकनीक", "स्वास्थ्य प्रबंधन"]
     },
     {
       icon: Heart,
-      title: "Milk Quality & Hygiene",
-      description: "Ensure premium milk quality through proper milking and hygiene practices",
-      features: ["Milking techniques", "Hygiene protocols", "Quality testing"]
+      title: "दूध की गुणवत्ता और स्वच्छता",
+      description: "उच्च गुणवत्ता वाले दूध उत्पादन के लिए स्वच्छता प्रोटोकॉल",
+      features: ["दुहने की तकनीक", "स्वच्छता नियम", "गुणवत्ता परीक्षण"]
     },
     {
       icon: Zap,
-      title: "Dairy Processing & Value Addition",
-      description: "Learn to process milk and create value-added dairy products",
-      features: ["Milk processing", "Product development", "Quality control"]
+      title: "डेयरी प्रसंस्करण और मूल्य संवर्धन",
+      description: "दूध प्रसंस्करण और मूल्य संवर्धित उत्पाद बनाना सीखें",
+      features: ["दूध प्रसंस्करण", "उत्पाद विकास", "गुणवत्ता नियंत्रण"]
     },
     {
       icon: TrendingUp,
-      title: "Business & Marketing",
-      description: "Build a profitable dairy business with effective marketing strategies",
-      features: ["Market channels", "Brand building", "Business scaling"]
+      title: "व्यापार और मार्केटिंग",
+      description: "प्रभावी मार्केटिंग रणनीतियों के साथ लाभदायक डेयरी व्यापार बनाएं",
+      features: ["बाजार चैनल", "ब्रांड निर्माण", "व्यापार विस्तार"]
     }
   ];
 
   const benefits = [
     {
       icon: DollarSign,
-      title: "Steady Income",
-      description: "Daily income from milk sales with consistent cash flow"
+      title: "स्थिर आय",
+      description: "दूध की बिक्री से दैनिक आय और निरंतर नकदी प्रवाह"
     },
     {
       icon: TrendingUp,
-      title: "Growing Market",
-      description: "Increasing demand for milk and dairy products in India"
+      title: "बढ़ता बाजार",
+      description: "भारत में दूध और डेयरी उत्पादों की बढ़ती मांग"
     },
     {
       icon: Shield,
-      title: "Government Support",
-      description: "Various government schemes and subsidies available"
+      title: "सरकारी सहायता",
+      description: "विभिन्न सरकारी योजनाएं और सब्सिडी उपलब्ध"
     },
     {
       icon: Zap,
-      title: "Value Addition",
-      description: "Multiple revenue streams through processing and products"
+      title: "मूल्य संवर्धन",
+      description: "प्रसंस्करण और उत्पादों के माध्यम से कई आय स्रोत"
     }
   ];
 
@@ -81,19 +81,19 @@ export default function DairyFarmingPage() {
       name: "मनीषा देवी",
       location: "Punjab",
       income: "₹80,000/month",
-      story: "Started with 10 cows, now manages 50+ dairy animals. Monthly income doubled through proper management."
+      story: "10 गायों से शुरुआत की, अब 50+ डेयरी पशुओं का प्रबंधन करती हैं। उचित प्रबंधन से मासिक आय दोगुनी हो गई।"
     },
     {
       name: "राजेश कुमार",
       location: "Haryana",
       income: "₹1,20,000/month",
-      story: "Integrated dairy farming with processing. Supplies milk products to local markets and schools."
+      story: "डेयरी फार्मिंग को प्रसंस्करण के साथ एकीकृत किया। स्थानीय बाजारों और स्कूलों में दूध उत्पाद की आपूर्ति करते हैं।"
     },
     {
       name: "सुमित्रा शर्मा",
       location: "Uttar Pradesh",
       income: "₹60,000/month",
-      story: "Buffalo dairy specialist. Focuses on high-fat milk production for premium market pricing."
+      story: "भैंस डेयरी विशेषज्ञ। प्रीमियम बाजार मूल्य निर्धारण के लिए उच्च वसा वाले दूध उत्पादन पर ध्यान देती हैं।"
     }
   ];
 
@@ -122,20 +122,20 @@ export default function DairyFarmingPage() {
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-600">12</div>
-                  <div className="text-sm text-muted-foreground">Weeks</div>
+                  <div className="text-2xl font-bold text-yellow-600">व्यापक</div>
+                  <div className="text-sm text-muted-foreground">प्रशिक्षण</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-600">4800+</div>
-                  <div className="text-sm text-muted-foreground">Students</div>
+                  <div className="text-2xl font-bold text-yellow-600">आधुनिक</div>
+                  <div className="text-sm text-muted-foreground">तकनीक</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-600">91%</div>
-                  <div className="text-sm text-muted-foreground">Success Rate</div>
+                  <div className="text-2xl font-bold text-yellow-600">विशेषज्ञ</div>
+                  <div className="text-sm text-muted-foreground">मार्गदर्शन</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-yellow-600">₹80K</div>
-                  <div className="text-sm text-muted-foreground">Avg Income</div>
+                  <div className="text-2xl font-bold text-yellow-600">व्यावहारिक</div>
+                  <div className="text-sm text-muted-foreground">ज्ञान</div>
                 </div>
               </div>
 

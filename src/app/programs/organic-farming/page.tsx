@@ -48,31 +48,31 @@ export default function OrganicFarmingPage() {
     {
       icon: TrendingUp,
       title: "प्रीमियम मार्केटिंग",
-      description: "Build your organic brand and access high-value market channels",
-      features: ["Brand building", "Premium pricing", "Direct marketing"]
+      description: "अपना जैविक ब्रांड बनाएं और उच्च मूल्य बाजार चैनलों तक पहुंच प्राप्त करें",
+      features: ["ब्रांड निर्माण", "प्रीमियम मूल्य निर्धारण", "प्रत्यक्ष विपणन"]
     }
   ];
 
   const benefits = [
     {
       icon: Leaf,
-      title: "Eco-Friendly",
-      description: "Sustainable farming practices that protect the environment"
+      title: "पर्यावरण अनुकूल",
+      description: "टिकाऊ खेती प्रथाएं जो पर्यावरण की रक्षा करती हैं"
     },
     {
       icon: DollarSign,
-      title: "Premium Pricing",
-      description: "Organic products command 30-50% higher prices in the market"
+      title: "प्रीमियम मूल्य निर्धारण",
+      description: "जैविक उत्पाद बाजार में 30-50% अधिक कीमत पर बिकते हैं"
     },
     {
       icon: Shield,
-      title: "Health Benefits",
-      description: "Chemical-free produce that's safer for consumers and farmers"
+      title: "स्वास्थ्य लाभ",
+      description: "रसायन मुक्त उत्पाद जो उपभोक्ताओं और किसानों के लिए सुरक्षित हैं"
     },
     {
       icon: TrendingUp,
-      title: "Growing Demand",
-      description: "Rapidly expanding organic food market in India and globally"
+      title: "बढ़ती मांग",
+      description: "भारत और विश्व स्तर पर तेजी से बढ़ता जैविक खाद्य बाजार"
     }
   ];
 
@@ -81,19 +81,19 @@ export default function OrganicFarmingPage() {
       name: "अमित वर्मा",
       location: "Uttar Pradesh",
       income: "₹80,000/month",
-      story: "Converted 5 acres to organic farming. Now supplies premium vegetables to urban markets with 40% higher profits."
+      story: "5 एकड़ को जैविक खेती में परिवर्तित किया। अब 40% अधिक लाभ के साथ शहरी बाजारों में प्रीमियम सब्जियों की आपूर्ति करते हैं।"
     },
     {
       name: "सुधा शर्मा",
       location: "Maharashtra",
       income: "₹60,000/month",
-      story: "Organic spice farming specialist. Exports organic turmeric and chili to international markets."
+      story: "जैविक मसाला खेती विशेषज्ञ। अंतर्राष्ट्रीय बाजारों में जैविक हल्दी और मिर्च का निर्यात करती हैं।"
     },
     {
       name: "राकेश कुमार",
       location: "Punjab",
       income: "₹1,20,000/month",
-      story: "Organic wheat and rice farmer. Supplies to organic food companies and has his own brand."
+      story: "जैविक गेहूं और चावल किसान। जैविक खाद्य कंपनियों को आपूर्ति करते हैं और अपना ब्रांड भी है।"
     }
   ];
 
@@ -109,44 +109,53 @@ export default function OrganicFarmingPage() {
             <div>
               <div className="flex items-center mb-6">
                 <Badge className="bg-green-100 text-green-800 border-green-200 px-4 py-2">
-                  🌱 Eco-Friendly Program
+                  🌱 पर्यावरण अनुकूल कार्यक्रम
                 </Badge>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-                <span className="text-green-600">Organic Farming</span> Excellence Course
+                <span className="text-green-600">जैविक खेती</span> प्रशिक्षण कार्यक्रम
               </h1>
               <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Master sustainable agriculture with our comprehensive 14-week organic farming program. 
-                Learn chemical-free farming techniques for premium market access.
+                नमस्कार किसान भाइयों! हमारे "Nisar Indian किसान साथी" ऐप के माध्यम से जैविक खेती की संपूर्ण जानकारी प्राप्त करें। 
+                रसायन मुक्त खेती तकनीक सीखें और प्रीमियम बाजार तक पहुंच प्राप्त करें।
               </p>
               
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">14</div>
-                  <div className="text-sm text-muted-foreground">Weeks</div>
+                  <div className="text-2xl font-bold text-green-600">व्यापक</div>
+                  <div className="text-sm text-muted-foreground">प्रशिक्षण</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">4200+</div>
-                  <div className="text-sm text-muted-foreground">Students</div>
+                  <div className="text-2xl font-bold text-green-600">रसायन</div>
+                  <div className="text-sm text-muted-foreground">मुक्त</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">90%</div>
-                  <div className="text-sm text-muted-foreground">Success Rate</div>
+                  <div className="text-2xl font-bold text-green-600">प्रीमियम</div>
+                  <div className="text-sm text-muted-foreground">बाजार</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">₹80K</div>
-                  <div className="text-sm text-muted-foreground">Avg Income</div>
+                  <div className="text-2xl font-bold text-green-600">विशेषज्ञ</div>
+                  <div className="text-sm text-muted-foreground">मार्गदर्शन</div>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3"
+                  onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+                >
                   <BookOpen className="mr-2 h-5 w-5" />
-                  Enroll Now - ₹5,999
+                  अभी डाउनलोड करें
                 </Button>
-                <Button size="lg" variant="outline" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-3">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-8 py-3"
+                  onClick={() => window.open('https://wa.me/918079043733?text=मुझे जैविक खेती प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+                >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call for Demo
+                  डेमो के लिए कॉल करें
                 </Button>
               </div>
             </div>
@@ -155,7 +164,7 @@ export default function OrganicFarmingPage() {
               <div className="bg-gradient-to-br from-green-400 to-emerald-600 rounded-2xl p-8 text-white shadow-2xl">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🌱</div>
-                  <h3 className="text-2xl font-bold mb-4">Go Organic Today</h3>
+                  <h3 className="text-2xl font-bold mb-4">आज ही शुरू करें</h3>
                   <div className="space-y-3">
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-5 w-5 mr-2" />
@@ -283,20 +292,29 @@ export default function OrganicFarmingPage() {
       <section className="py-20 bg-gradient-to-br from-green-600 to-emerald-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Ready to Go Organic?
+            जैविक खेती शुरू करने के लिए तैयार हैं?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Join the organic farming revolution and build a sustainable, profitable farm
+            जैविक खेती क्रांति में शामिल हों और एक टिकाऊ, लाभदायक फार्म बनाएं
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3">
+            <Button 
+              size="lg" 
+              className="bg-white text-green-600 hover:bg-gray-100 px-8 py-3"
+              onClick={() => window.open('https://play.google.com/store/apps/details?id=com.nisarindian.classes', '_blank')}
+            >
               <BookOpen className="mr-2 h-5 w-5" />
-              Enroll Now - ₹5,999
+              अभी डाउनलोड करें
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-3">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-3"
+              onClick={() => window.open('https://wa.me/918079043733?text=मुझे जैविक खेती प्रशिक्षण के बारे में जानकारी चाहिए', '_blank')}
+            >
               <Phone className="mr-2 h-5 w-5" />
-              Call: +91-9876543210
+              कॉल: +91-8079043733
             </Button>
           </div>
           
